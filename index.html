@@ -6,7 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
+
+    %%[
+
+        var @lookupValue, @talosBoostCode
+
+        set @lookupValue = "1160100030" /* or a literal value */
+
+        set @talosBoostCode = Lookup("KonstantinosTest","TalosBoostCode","ConsumerUrn", @lookupValue)
+
+    ]%%
+
+
     <body>
         <h1>Hello World!!!</h1>
+        <p>User Talos Code: %%=v(@talosBoostCode)=%%</p>
     </body>
 </html>
